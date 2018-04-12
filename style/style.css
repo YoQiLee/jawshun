@@ -1,0 +1,89 @@
+body{
+	margin: 0;
+	font-size: 16px;
+	background-color: #fff;
+	font-family: "微软雅黑";
+}
+
+/* 未访问的链接 */
+a:link{
+	text-decoration: none;
+} 
+/* 已访问的链接 */
+a: visited {
+	text-decoration: none;
+}
+/* 当有鼠标悬停在链接上 */
+a: hover {
+	text-decoration: none;
+}
+/* 被选择的链接 */
+a: active {
+	text-decoration: none;
+}
+
+.blankBar{
+	display: block;
+	height: 20px;
+}
+
+.color-black{
+	background-color: #000;
+}
+
+.boxContent{
+	display: block;
+	margin:0 auto;
+	width: 100%;
+}
+
+/*
+	头部样式
+ */
+.header{
+	height: 62px;
+	display: block;
+	padding: 20px 0px 0 100px;
+	background-color: #333;
+}
+.header .logo{
+	float: left;
+	width:210px;
+	height: 62px;
+}
+.header .nav{
+	float: left;
+	width: 1028px;
+	height: 62px;
+}
+.nav .telphone{
+	display: block;
+	font-size: 16px;
+	color:#fff;
+	text-align: right;
+	height: 22px;
+}
+.nav .menu{
+    margin-left: 150px;
+	display: block;
+	height: 40px;
+}
+.nav a{
+	font-size: 20px;
+	display: inline-block;
+	width: 120px;
+	line-height: 40px;
+	text-align: center;
+}
+
+.on{
+	background-color: #fabe00;
+	color: #333;
+}
+
+.un-on{
+	background-color: #333;
+	color: #FFF;
+}
+
+/**********************************/
