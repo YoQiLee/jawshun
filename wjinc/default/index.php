@@ -3,12 +3,19 @@
 <head>
 <?php $this->display('inc_skin.php',0,'首页'); ?>
 <link rel="stylesheet" type="text/css" href="style/style.css">
+<link rel="stylesheet" type="text/css" href="style/jquery.simpleslider.css">
 </head>
 <body>
     <?php $this->display('inc_header.php'); ?>
 	<div class="main">
 		<div class="advert-banner">
-			
+			<div class="slider">
+				<div class="slide" id="first">
+					<div class="slidecontent">
+						
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
     <?php $this->display('inc_footer.php'); ?> 
@@ -17,6 +24,7 @@
 </body>
 </html>
 <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="js/simple-jQuery-slider-master/src/jquery.simpleslider.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
 		console.info("hello1");
