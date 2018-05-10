@@ -54,30 +54,30 @@ if(!is_file($file))
 try{
 	//print_r($file . ' ');
 	//require 'wjaction/default/Default.class.php';
-	print_r($file . ' ');
+	//print_r($file . ' ');
 	require $file;
-	print_r("aaaaa" . ' ');
+	//print_r("aaaaa" . ' ');
 }catch(Exception $e){
-	print_r("2");
-	print_r($e);
+	//print_r("2");
+	//print_r($e);
 	exit;
 }
-print_r("11111" . ' ');
+//print_r("11111" . ' ');
 if(!class_exists($control)) notfound('找不到控制器1');
-print_r("11111" . ' ');
+//print_r("11111" . ' ');
 $jms=new $control($conf['db']['dsn'], $conf['db']['user'], $conf['db']['password']);
-print_r("good" . ' ');
+//print_r("good" . ' ');
 $jms->debugLevel=$conf['debug']['level'];
-print_r("11111" . ' ');
+//print_r("11111" . ' ');
 
 if(!method_exists($jms, $action)) notfound('方法不存在');
-print_r("11111" . ' ');
+//print_r("11111" . ' ');
 $reflection=new ReflectionMethod($jms, $action);
-print_r("11111" . ' ');
+//print_r("11111" . ' ');
 if($reflection->isStatic()) notfound('不允许调用Static修饰的方法');
-print_r("11111" . ' ');
+//print_r("11111" . ' ');
 if(!$reflection->isFinal()) notfound('只能调用final修饰的方法');
-print_r("222222222222222222");
+//print_r("222222222222222222");
 $jms->controller=$control;
 $jms->action=$action;
 
@@ -91,7 +91,7 @@ $jms->title=$conf['web']['title'];
 {
 	$jms->getSystemSettings();
 }*/
-print_r("33333333333333333333333");
+//print_r("33333333333333333333333");
 if($jms->settings['switchWeb']=='0'){
 	$jms->display('close-service.php');
 	exit;
@@ -142,7 +142,7 @@ if(isset($jms->headers['x-call'])){
 		$jms->error($e->getmessage());
 	}
 }else{
-	print_r('bbbbbbbbbbbbbbbbbbbbbbbbbbbbb');
+	//print_r('bbbbbbbbbbbbbbbbbbbbbbbbbbbbb');
 	// 普通请求
 	header('content-Type: text/html;charset=utf-8');
 	//$reflection->invokeArgs($jms, $para);
