@@ -3,13 +3,13 @@ require_once('sqlin.php');
 $conf['debug']['level']=5;
 
 /*		数据库配置		*/
-$conf['db']['dsn']='mysql:host=localhost;dbname=p8;charset=utf8';
-$dbname='p8';
+$conf['db']['dsn']='mysql:host=localhost;dbname=jawshun;charset=utf8';
+$dbname='jawshun';
 $dbhost='localhost';
 $conf['db']['user']='root';
 $conf['db']['password']='root';
 $conf['db']['charset']='utf8';
-$conf['db']['prename']='ssc_';
+$conf['db']['prename']='js_';
 
 $conf['cache']['expire']=0;
 $conf['cache']['dir']='_cache/';
@@ -18,6 +18,9 @@ $conf['url_modal']=2;
 
 $conf['action']['template']='wjinc/default/';
 $conf['action']['modals']='wjaction/default/';
+
+$conf['action']['admin_template']='wjinc/admin/';
+$conf['action']['admin_modals']='wjaction/admin/';
 
 $conf['member']['sessionTime']=15*60;	// 用户有效时长
 

@@ -1,8 +1,8 @@
 <?php
 /**
- * Ç°Ì¨Ò³Ãæ»ùÀà
+ * Ã‡Â°ÃŒÂ¨Ã’Â³ÃƒÃ¦Â»Ã¹Ã€Ã 
  */
-class WebBase1 extends Object{
+class WebBase extends Object{
 	public $controller;
 	public $action;
 
@@ -11,14 +11,14 @@ class WebBase1 extends Object{
 	public $headers;
 
 	public $page=1;
-	public $title='Ë³·á¹ú¼Ê';
-	public $params=array();	// ÏµÍ³ÅäÖÃ²ÎÊý
+	public $title='Ã‹Â³Â·Ã¡Â¹ÃºÂ¼ÃŠ';
+	public $params=array();	// ÃÂµÃÂ³Ã…Ã¤Ã–ÃƒÂ²ÃŽÃŠÃ½
 
-	public $types;			// ²ÊÆ±ÖÖÀàÐÅÏ¢Êý×é
-	public $playeds;		// Íæ·¨ÐÅÏ¢Êý×é
-	private $expire=3600;	// ¶ÁÈ¡Íæ·¨¡¢²ÊÆ±»º´æ
+	public $types;			// Â²ÃŠÃ†Â±Ã–Ã–Ã€Ã ÃÃ…ÃÂ¢ÃŠÃ½Ã—Ã©
+	public $playeds;		// ÃÃ¦Â·Â¨ÃÃ…ÃÂ¢ÃŠÃ½Ã—Ã©
+	private $expire=3600;	// Â¶ÃÃˆÂ¡ÃÃ¦Â·Â¨Â¡Â¢Â²ÃŠÃ†Â±Â»ÂºÂ´Ã¦
 	
-	public $urlPasswordKey='shunfengexpress88888888';//ÍÆ¹ãÁ´½Ó¼ÓÃÜ
+	public $urlPasswordKey='shunfengexpress88888888';//ÃÃ†Â¹Ã£ÃÂ´Â½Ã“Â¼Ã“ÃƒÃœ
 
 	function __construct($dsn, $user='', $password=''){
 		session_start();
@@ -66,7 +66,7 @@ class WebBase1 extends Object{
 	}
 	
 	/**
-	 * ¶ÁÈ¡ÏµÍ³ÅäÖÃ²ÎÊý
+	 * Â¶ÃÃˆÂ¡ÃÂµÃÂ³Ã…Ã¤Ã–ÃƒÂ²ÃŽÃŠÃ½
 	 */
 	public function getSystemConfig(){
 		$file=$this->cacheDir .'FDJSALKFJSIDFJSKLJFFSJDafkljdasa5235465723';
@@ -94,11 +94,11 @@ class WebBase1 extends Object{
 	}
 	
 	/**
-	 * ¶ÁÈ¡½«Òª¿ª½±ÆÚºÅ
+	 * Â¶ÃÃˆÂ¡Â½Â«Ã’ÂªÂ¿ÂªÂ½Â±Ã†ÃšÂºÃ…
 	 *
-	 * @params $type		²ÊÖÖID
-	 * @params $time		Ê±¼ä£¬Èç¹ûÃ»ÓÐ£¬µ±Ä¬ÈÏµ±Ç°Ê±¼ä
-	 * @params $flag		Èç¹ûÎªtrue£¬Ôò·µ»Ø×î½ü¹ýÈ¥µÄÒ»ÆÚ£¨Ò»°ãÊÇ×î½ü¿ª½±µÄÒ»ÆÚ£©£¬Èç¹ûÎªflase£¬ÔòÊÇ½«Òª¿ª½±µÄÒ»ÆÚ
+	 * @params $type		Â²ÃŠÃ–Ã–ID
+	 * @params $time		ÃŠÂ±Â¼Ã¤Â£Â¬ÃˆÃ§Â¹Ã»ÃƒÂ»Ã“ÃÂ£Â¬ÂµÂ±Ã„Â¬ÃˆÃÂµÂ±Ã‡Â°ÃŠÂ±Â¼Ã¤
+	 * @params $flag		ÃˆÃ§Â¹Ã»ÃŽÂªtrueÂ£Â¬Ã”Ã²Â·ÂµÂ»Ã˜Ã—Ã®Â½Ã¼Â¹Ã½ÃˆÂ¥ÂµÃ„Ã’Â»Ã†ÃšÂ£Â¨Ã’Â»Â°Ã£ÃŠÃ‡Ã—Ã®Â½Ã¼Â¿ÂªÂ½Â±ÂµÃ„Ã’Â»Ã†ÃšÂ£Â©Â£Â¬ÃˆÃ§Â¹Ã»ÃŽÂªflaseÂ£Â¬Ã”Ã²ÃŠÃ‡Â½Â«Ã’ÂªÂ¿ÂªÂ½Â±ÂµÃ„Ã’Â»Ã†Ãš
 	 */
 	public function getGameNo($type, $time=null){
 		$type=intval($type);
@@ -282,10 +282,10 @@ class WebBase1 extends Object{
 		$actionNo = 179*(strtotime(date('Y-m-d', $time))-strtotime('2004-09-19'))/3600/24+$actionNo-77;
 	}
 	/**
-	 * ¶ÁÈ¡µ±Ç°ÉèÖÃµÄÅâÂÊ
+	 * Â¶ÃÃˆÂ¡ÂµÂ±Ã‡Â°Ã‰Ã¨Ã–ÃƒÂµÃ„Ã…Ã¢Ã‚ÃŠ
 	 *
-	 * @params $type		²ÊÖÖID£¬
-	 * @params $playedId	Íæ·¨ID
+	 * @params $type		Â²ÃŠÃ–Ã–IDÂ£Â¬
+	 * @params $playedId	ÃÃ¦Â·Â¨ID
 	 */
 	public function getBonusProp($type, $playedId){
 		$sql="select value from {$this->prename}pl where type=? and playedId=?";
@@ -301,7 +301,7 @@ class WebBase1 extends Object{
 		if($user=unserialize($_SESSION[$this->memberSessionName])) return $user;
 		//header('X-Not-Login: ');
 		header('location: /index.php/user/login');
-		exit('ÄúÃ»ÓÐµÇÂ¼');
+		exit('Ã„ÃºÃƒÂ»Ã“ÃÂµÃ‡Ã‚Â¼');
 	}
 
 	private function setClientMessage($message, $type='Info', $showTime=3000){
@@ -323,7 +323,7 @@ class WebBase1 extends Object{
 		$this->setClientMessage($message, 'Error', $showTime);
 		exit;
 	}
-	//»ñÈ¡ÑÓ³ÙÊ±¼ä
+	//Â»Ã±ÃˆÂ¡Ã‘Ã“Â³Ã™ÃŠÂ±Â¼Ã¤
 	public function getTypeFtime($type){
 		
 		if($type){
@@ -332,7 +332,7 @@ class WebBase1 extends Object{
 			if(!$Ftime) $Ftime=0;
 			return intval($Ftime);
 	 }
-	//»ñÈ¡¸ÃÍæ·¨×î´ó×¢Êý
+	//Â»Ã±ÃˆÂ¡Â¸ÃƒÃÃ¦Â·Â¨Ã—Ã®Â´Ã³Ã—Â¢ÃŠÃ½
 	public function getmaxcount($playedid){
 		if($playedid){
 				$maxcount=$this->getValue("select maxcount from {$this->prename}played where id = ? ", $playedid);
@@ -341,7 +341,7 @@ class WebBase1 extends Object{
 	 }
 	 //////
 	 
-	 //»ñÈ¡µ±ÆÚÊ±¼ä
+	 //Â»Ã±ÃˆÂ¡ÂµÂ±Ã†ÃšÃŠÂ±Â¼Ã¤
 	public function getGameActionTime($type,$old=0){
 		$actionNo=$this->getGameNo($type);
 		
@@ -354,13 +354,13 @@ class WebBase1 extends Object{
 		return $actionTime;
 	}/////
 	
-	//»ñÈ¡µ±ÆÚÆÚÊý
+	//Â»Ã±ÃˆÂ¡ÂµÂ±Ã†ÃšÃ†ÃšÃŠÃ½
 	public function getGameActionNo($type){
 		$actionNo=$this->getGameNo($type);
 		return $actionNo['actionNo'];
 	}/////
 	
-	//Ëæ»úº¯Êý
+	//Ã‹Ã¦Â»ÃºÂºÂ¯ÃŠÃ½
 	public function randomkeys($length)
 	{
 	 $key = "";
@@ -375,7 +375,7 @@ class WebBase1 extends Object{
 	 return $key;
 	}
 	
-	//Êä³öµ¥ºÅ
+	//ÃŠÃ¤Â³Ã¶ÂµÂ¥ÂºÃ…
 	function formatwords($str){
 		
 	if($str){

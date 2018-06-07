@@ -2,7 +2,7 @@
 /**
  * 前台页面基类
  */
-class WebLoginBase1 extends WebBase{
+class WebLoginBase extends WebBase{
 	public $type;		// 彩票种类ID
 	public $groupId;	// 玩法组ID
 	public $played;		// 玩法ID

@@ -1,11 +1,7 @@
 <?php
-class Admin extends AdminBase{
+class Admin extends WebLoginBase{
 	public final function index($params=''){
-		$this->display('index6215742.php');
-	}
-	
-	public final function login($params=''){
-		$this->display('login8421039.php');
-	}
-	
+		//print('aaaaa');
+		$this->display('wjinc/admin/index.php');
+	}	
 }
